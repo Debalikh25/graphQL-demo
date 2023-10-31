@@ -1,0 +1,44 @@
+type Student {
+ 
+ roll : Int!
+ name : String!
+ gender : String!
+ age : Int!
+ subjects : [Subject]!
+ 
+ }
+ 
+ 
+ 
+type Subject {
+ 
+  id : Int!
+  name : String!
+  marks : Int!
+ 
+ }
+ 
+ 
+ input Subject1 {
+ 
+  id : Int!
+  name : String!
+  marks : Int!
+ 
+ }
+ 
+
+type Query {
+
+  getStudent(name : String!) : Student
+  getStudents: [Student]
+
+}
+
+
+type Mutation {
+
+      addStudent(roll : Int! , name : String! , gender : String! , age : Int , subjects : [Subject1]):Student
+
+}
+
